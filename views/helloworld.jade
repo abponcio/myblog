@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h1= title
+	p This is #{title}
+	p User List
+	a(href="/newuser") add user
+	ul
+		each user, u in users
+			li
+				p= user.username
